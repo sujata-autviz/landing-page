@@ -1,0 +1,901 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ApplyGenie</title>
+  <meta property="og:image" content="images/logo-small.png">
+  <meta name="title" content="ApplyGenie">
+  <meta name="description" content="Applying for jobs is a full-time job itself, and finding the right job has never been more competitive or difficult. ApplyGenie 
+    automates the first round of your job hunt by applying to jobs online on your behalf while you can spend your time elsewhere. 
+    Send out hundreds of personalized job applications for relevant roles at the click of a button!">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+  <!-- Google Analytics  -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4P1BPTQJW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date()); gtag('config', 'G-X4P1BPTQJW');
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-W3JSX3SG');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Reddit Pixel -->
+  <script>
+    !function (e, t, n, r) {
+      if (!e[n]) {
+        for (var a = e[n] = [], c = ["fire", "track", "identify", "alias", "page", "once", "off", "on"],
+          s = 0; s < c.length; s++) {
+          var i = c[s]; e[n][i] = function (e) {
+            return function () {
+              var t = Array.prototype.slice.call(arguments);
+              t.unshift(i); a.push(t), console.log(t)
+            }
+          }(i)
+        } e[n].l = +new Date
+      }
+    }(window, document, "rdt", "script");
+    rdt('init', 'a2_eerup83tnb9i');
+    rdt('track');
+  </script>
+  <!-- End Reddit Pixel -->
+</head>
+
+<body>
+  <!-- navbar start -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <div class="logo">
+        <a class="navbar-brand" href="">
+          <img src="images/small-logo.png" alt="ApplyGenie Logo" style="display: none;">
+          <img src="images/NewApplyGenie Logo.png" alt="ApplyGenie Logo">
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link cursor-pointer" onclick="scrollToElement('how-works')">How It Works</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link cursor-pointer" onclick="scrollToElement('about')">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link cursor-pointer" onclick="scrollToElement('pricing')">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link cursor-pointer" onclick="scrollToElement('contact')">Contact Us</a>
+          </li>
+        </ul>
+        <div class="blue-button main-nav">
+          <a href="https://app.applygenie.ai/#/account/register">Try for Free</a>
+        </div>
+        <div class="blue-button main-nav">
+          <a href="https://app.applygenie.ai/#/account/login">Sign In</a>
+        </div>
+      </div>
+      <div class="blue-button mobile mx-2">
+        <a href="https://app.applygenie.ai/#/account/register">Try for Free</a>
+      </div>
+      <div class="blue-button mobile">
+        <a href="https://app.applygenie.ai/#/account/login">Sign In</a>
+      </div>
+
+    </div>
+  </nav>
+  <!-- navbar end -->
+
+  <!-- banner start -->
+  <!-- <div class="home-banner">
+    <div class="swiper home mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="banner-slider-wrapper hero-banner bg-style" style="background-image: url(images/banner.png)">
+            <div class="banner-text">
+              <h1>
+                Streamline Your <span class="red-text">Job Search</span> Like Magic
+              </h1>
+              <p>
+                Empowering Job Seekers with the #1 Automation Tool
+                for Applying to Jobs
+              </p>
+              <div class="blue-button mt-4">
+                <a href="https://app.applygenie.ai/#/account/register">Try for Free</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="banner-slider-wrapper hero-banner bg-style" style="background-image: url(images/OldMen.jpg)">
+            <div class="banner-text">
+              <h1>
+                #1 Tool to <span class="red-text">Automate Job Applications</span>
+              </h1>
+              <p>
+                Apply to hundreds of jobs at the click of a button
+              </p>
+              <div class="blue-button mt-4">
+                <a href="https://app.applygenie.ai/#/account/register">Try for Free</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="banner-slider-wrapper hero-banner bg-style" style="background-image: url(images/slider-img3.png)">
+            <div class="banner-text">
+              <h1>
+                A Better <span class="red-text">Job Hunt Process</span><br />
+              </h1>
+              <p>
+                Your wish for a simpler job search... granted<br />
+              </p>
+              <div class="blue-button mt-4">
+                <a href="https://app.applygenie.ai/#/account/register">Try for Free</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div> -->
+  <!-- banner end -->
+
+  <section class="banner-img-text">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-5 col-md-12">
+          <div class="banner-text banner-text-2">
+            <h1>
+              Streamline Your Job Search <span class="red-text">Like Magic</span>
+            </h1>
+            <p>
+              Empowering Job Seekers with the #1 Automation Tool for Applying to Jobs
+            </p>
+            <div class="blue-button mt-4">
+              <a href="https://app.applygenie.ai/#/account/register">Try for Free</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-12">
+          <div class="banner-gif">
+            <img src="images/banner-gif2.gif" alt="gif" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- after banner section start -->
+  <section class="how-work" id="how-works">
+    <div class="container">
+      <div class="work-text">
+        <h2><span class="bg-circle">How</span> It Works</h2>
+        <p>Finding a new job can be a time consuming and demoralizing process. Applying for jobs is a full-time
+          job itself, and finding the right job has never been more competitive or difficult. ApplyGenie automates the
+          first round of your job hunt by applying to jobs online on your behalf while you can spend your time
+          elsewhere. Send out hundreds of personalized job applications for relevant roles at the click
+          of a button!</p>
+      </div>
+      <!-- video banner section start -->
+      <div class="container">
+        <div class="video-img">
+          <iframe width="80%" height="525" src="https://www.youtube.com/embed/LDXj7uwNAQQ?si=iDl1K_YiSpI-H2oc&rel=0"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <!-- video banner section end -->
+      <div class="three-box-card">
+        <div class="row gy-3">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="three-img-box">
+              <div class="step-tag">
+                <p>Step 1</p>
+              </div>
+              <div class="work-img">
+                <img src="images/job-site.png" alt="Job Hunt Automation">
+                <div class="image-text">
+                  <h3>Connect to Job Sites</h3>
+                  <p>
+                    Sign in to link your ApplyGenie account to your LinkedIn or
+                    Indeed profiles
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="three-img-box">
+              <div class="step-tag">
+                <p>Step 2</p>
+              </div>
+              <div class="work-img">
+                <img src="images/man-sitting.png" alt="Automate Job Search">
+                <div class="image-text">
+                  <h3>Set Your Preferences</h3>
+                  <p>
+                    Answer some basic questions about your background and what jobs
+                    you are looking for
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="three-img-box">
+              <div class="step-tag">
+                <p>Step 3</p>
+              </div>
+              <div class="work-img">
+                <img src="images/automation.png" alt="Automatically Apply to Jobs">
+                <div class="image-text">
+                  <h3>Run Automation</h3>
+                  <p>
+                    Let ApplyGenie take it from here! We will apply to relevant jobs
+                    with personalized responses
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- after banner section end -->
+
+  <!-- about section start -->
+  <section class="about-genie bg-style" id="about" style="background-image: url(images/about-bg.svg);">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="about-img">
+            <img src="images/logo-trans.png" alt="Render analytics logo">
+          </div>
+          <div class="caption-img">
+            <h4>Our mission is to empower job seekers by lowering the effort required to find new
+              opportunities for
+              employement.</h4>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="about-content">
+            <h2>About us</h2>
+            <p>ApplyGenie is a job application automation tool created by the developer team at <a
+                href="http://renderanalytics.net/" class="link-text">Render Analytics</a>.
+              ApplyGenie uses web scraping technology to actively interact with third-party job posting websites and
+              apply
+              to many jobs at once without manual user involvement required.</p>
+            <div class="blue-button mt-4">
+              <a onclick="scrollToElement('contact')">Get in Touch</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- about section ends -->
+
+  <!-- jobs section start -->
+  <section class="job-hunt">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-12">
+          <div class="job-desc">
+            <h6>Giving Job Seekers More Time and Better Results</h6>
+            <h2>Making Your Job Hunt Wishes Come True</h2>
+            <div class="content">
+              <p>
+                Applying for a job... <b>is a job.</b> There is nothing more
+                demoralizing than getting home from a long-day's work and having
+                to put in another shift to apply for new jobs. These are all
+                things you could be doing instead:
+              </p>
+              <div class="home-banner">
+                <div class="swiper home mySwiper w-75 mx-auto">
+                  <div class="swiper-wrapper">
+                    <div class=" swiper-slide">
+                      <div class="about-four-slide w-100">
+                        <div class="overflow-hidden">
+                          <div class="textOnimg position-absolute start-0 bottom-0 w-100">
+                            <p>Sipping Wine</p>
+                          </div>
+                          <img src="images/sipping-wine.jpg" alt="Sipping wine" class="carouselImg" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class=" swiper-slide">
+                      <div class="about-four-slide w-100">
+                        <div class="overflow-hidden">
+                          <div class="textOnimg position-absolute start-0 bottom-0 w-100">
+                            <p>Reading A Book</p>
+                          </div>
+                          <img src="images/reading-book.jpg" alt="Automated Job Applications" class="carouselImg" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class=" swiper-slide">
+                      <div class="about-four-slide w-100">
+                        <div class="overflow-hidden">
+                          <div class="textOnimg position-absolute start-0 bottom-0 w-100">
+                            <p>Spending Time with Family</p>
+                          </div>
+                          <img src="images/family-spending-time.jpg" alt="Spending time with family"
+                            class="carouselImg" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class=" swiper-slide">
+                      <div class="about-four-slide w-100">
+                        <div class="overflow-hidden">
+                          <div class="textOnimg position-absolute start-0 bottom-0 w-100">
+                            <p>Watching Your Favourite Show</p>
+                          </div>
+                          <img src="images/watching-tv.jpg" alt="Watching your favourite show" class="carouselImg" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+              </div>
+              <p class="mt-3">
+                ApplyGenie has one purpose: automate the process of sending out
+                job applications so you can get your valuable time back. Let us
+                find the next perfect job for you tailored to your individual
+                needs and goals. Take a backseat and let the job search come to
+                you!
+              </p>
+              <P>
+                ApplyGenie is currently available for LinkedIn and Indeed. Users
+                must have an active account on one of these two platforms in order
+                for our automation tool to do its magic!
+              </P>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- jobs section ends -->
+
+  <!-- applygenie perks section starts -->
+  <section class="genie-perks">
+    <div class="container">
+      <div class="sec-heading">
+        <h2 class="text-center"><span class="bg-circle">Some</span> of the perks of ApplyGenie include:</h2>
+      </div>
+      <div class="row gy-3">
+        <div class="col-lg col-md-6">
+          <div class="perk-box">
+            <div class="perk-icon">
+              <img src="images/perk1.svg" alt="Job application automation">
+            </div>
+            <div class="perk-text">
+              <p>25 Free Automated Job Applications</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg col-md-6">
+          <div class="perk-box">
+            <div class="perk-icon">
+              <img src="images/perk2.svg" alt="Time saving automation">
+            </div>
+            <div class="perk-text">
+              <p>Time-Saving Automation</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg col-md-6">
+          <div class="perk-box">
+            <div class="perk-icon">
+              <img src="images/perk3.svg" alt="Job post filtering">
+            </div>
+            <div class="perk-text">
+              <p>Advanced Job Post Filtering</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg col-md-6">
+          <div class="perk-box">
+            <div class="perk-icon">
+              <img src="images/perk4.svg" alt="Targeted and personalized responses">
+            </div>
+            <div class="perk-text">
+              <p>Targeted & Personalized Responses</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg col-md-6">
+          <div class="perk-box">
+            <div class="perk-icon">
+              <img src="images/perk5.svg" alt="Reporting and data visibility">
+            </div>
+            <div class="perk-text">
+              <p>Reporting & Data Visibility</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--  applygenie perks ends -->
+
+  <!--  testimonial section start -->
+  <section class="testimonial">
+    <div class="container">
+      <h2 class="text-center">Testimonials</h2>
+      <div class="swiper testimonial-slider mySwiper">
+        <div class="swiper-wrapper">
+          <div class="testi-box swiper-slide">
+            <div class="testi-img">
+              <img src="images/quotes.svg" alt="Quotation marks representing quotes">
+            </div>
+            <div class="desc-name">
+              <img src="images/stars.svg" alt="Illustration of stars for ratings or reviews">
+              <p>
+                I used ApplyGenie one time to apply to 100 jobs and got over a
+                dozen responses and 4 interviews lined up. I can't believe how
+                easy this made the process of applying for jobs.
+              </p>
+              <h4>- Larry Y</h4>
+            </div>
+          </div>
+          <div class="testi-box swiper-slide">
+            <div class="testi-img">
+              <img src="images/quotes.svg" alt="Quotation marks representing quotes">
+            </div>
+            <div class="desc-name">
+              <img src="images/stars.svg" alt="Illustration of stars for ratings or reviews">
+              <p>
+                This is one of the best ideas I have seen in a while- can't believe how easy it was to apply for jobs !
+              </p>
+              <h4>- Logan T</h4>
+            </div>
+          </div>
+          <div class="testi-box swiper-slide">
+            <div class="testi-img">
+              <img src="images/quotes.svg" alt="Quotation marks representing quotes">
+            </div>
+            <div class="desc-name">
+              <img src="images/stars.svg" alt="Illustration of stars for ratings or reviews">
+              <p>
+                I keep getting interview requests even weeks after using
+                ApplyGenie only once.
+              </p>
+              <h4>- Sarah H</h4>
+            </div>
+          </div>
+          <div class="testi-box swiper-slide">
+            <div class="testi-img">
+              <img src="images/quotes.svg" alt="Quotation marks representing quotes">
+            </div>
+            <div class="desc-name">
+              <img src="images/stars.svg" alt="Illustration of stars for ratings or reviews">
+              <p>
+                I don't mind my current role, but ApplyGenie makes exploring
+                additional opportunities straightforward without it becoming a
+                chore.
+              </p>
+              <h4>- Hubba A</h4>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+  </section>
+  <!--  testimonial section ends -->
+
+  <!--  pricing section ends -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="sec-head text-center mb-5">
+        <h2><span class="bg-circle">Pricing</span></h2>
+        <h2 class="red-text">No Cost- 25 Job Applications</h2>
+        <h3 class="red-text"><i>No Payment Information Required</i></h3>
+      </div>
+      <div class="row gy-3">
+        <div class="col-md-4">
+          <div class="pricing-box text-center">
+            <div class="price-text">
+              <h2 class="red-text">$19.99</h2>
+              <h3>Additional 25 Job Applications</h3>
+              <p>($0.80 per application)</p>
+              <div class="blue-button">
+                <a href="https://app.applygenie.ai/#/account/login">Purchase</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="pricing-box text-center">
+            <div class="price-text">
+              <h2 class="red-text">$59.99</h2>
+              <h3>Additional 100 Job Applications</h3>
+              <p>($0.60 per application)</p>
+              <div class="blue-button">
+                <a href="https://app.applygenie.ai/#/account/login">Purchase</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="pricing-box text-center">
+            <div class="price-text">
+              <h2 class="red-text">$99.99</h2>
+              <h3>Additional 200 Job Applications</h3>
+              <p>($0.50 per application)</p>
+              <div class="blue-button">
+                <a href="https://app.applygenie.ai/#/account/login">Purchase</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--  pricing section ends -->
+
+  <!--  contact section start -->
+  <section class="contact-form" id="contact">
+    <div class="container">
+      <div class="sec-head">
+        <h2 class="text-center"><span class="bg-circle">Contact</span> Us</h2>
+        <div class="owner mt-5">
+          <div>
+            <img src="images/edit.svg" alt="Edit icon">
+          </div>
+          <div class="name-email">
+            <h5>Render Analytics Support</h5>
+            <p class="m-0"> <a href="mailto:support@renderanalytics.net">support@renderanalytics.net</a></p>
+          </div>
+        </div>
+      </div>
+      <form #form="ngForm">
+        <div class="form">
+          <div class="form-group d-flex">
+            <div class="w-100">
+              <input type="text" required name="userName" placeholder="Name" />
+              <span class="error-message" id="errorUserName"></span>
+            </div>
+            <div class="w-100">
+              <input type="email" required name="userEmail" placeholder="E-mail" />
+              <span class="error-message" id="errorUserEmail"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="w-100">
+              <input type="tel" required name="phoneNumber" placeholder="Phone" maxlength="15" />
+              <span class="error-message" id="errorPhoneNumber"></span>
+            </div>
+          </div>
+          <textarea name="message" required placeholder="Message"></textarea>
+          <span class="error-message" id="errorMessage"></span>
+          <div class="text-center blue-button mt-4" id="contact-form">
+            <a id="get-in-button" class="cursor-pointer">Get in Touch</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+  <!--  contact section ends -->
+
+  <!-- Modal -->
+  <div class="modal" id="successModal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <img src="images/success.png" alt="Success illustration">
+        </div>
+        <div class="modal-body text-center">
+          <h4>Thank you for writting us</h4>
+          <p>We will revert you back soon</p>
+        </div>
+        <div class="modal-footer justify-content-center border-0 pt-0">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer start -->
+  <footer>
+    <div class="container">
+      <div class="row pb-5">
+        <div class="col-md-4">
+          <div class="logo">
+            <img src="images/NewApplyGenie Logo.png" alt="ApplyGenie Logo">
+          </div>
+          <div class="social-text">
+            <p>ApplyGenie is a job application automation tool created by the developer team at Render Analytics.</p>
+            <ul class="p-0">
+              <li><a href="https://www.facebook.com/applygenie" target="_blank"><img src="images/fb.svg"
+                    alt="Facebook Icon"></a></li>
+              <li><a href="https://www.instagram.com/applygenie/" target="_blank"><img src="images/insta.svg"
+                    alt="Instagram Icon"></a>
+              </li>
+              <li><a href="https://www.youtube.com/@renderanalytics6841" target="_blank"><img src="images/yt.svg"
+                    alt="YouTube Icon"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul class="p-0">
+              <li><a href="">Home</a></li>
+              <li><a onclick="scrollToElement('how-works')" class="cursor-pointer">How It Works</a></li>
+              <li><a onclick="scrollToElement('about')" class="cursor-pointer">About Us</a></li>
+              <li><a onclick="scrollToElement('pricing')" class="cursor-pointer">Pricing</a></li>
+              <li><a onclick="scrollToElement('contact')" class="cursor-pointer">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="footer-two-btn">
+            <a href="https://app.applygenie.ai/#/account/login" class="login">Login</a>
+            <a href="https://app.applygenie.ai/#/account/register" class="signup">Sign up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright-text">
+      <div class="container">
+        <div class="d-flex justify-content-between footer-texy">
+          <a class="mb-0 " href="http://renderanalytics.net/" target="_blank">Powered by Render Analytics</a>
+          <a href="https://app.applygenie.ai/#/account/term-and-conditions">Terms and conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3JSX3SG" height="0" width="0"
+      style="display:none;visibility:hidden">
+    </iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- footer ends -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // const url = "http://renderapp-env-api.ca-central-1.elasticbeanstalk.com/api/services/app/Support/sendSupportMessage";
+      const url = "https://api.applygenie.ai/api/services/app/Support/sendSupportMessage";
+      const contactForm = document.getElementById("contact-form");
+      const getButton = document.getElementById("get-in-button")
+      const successModal = document.getElementById('successModal')
+      let userNameInput = document.querySelector('[name="userName"]')
+      let userEmailInput = document.querySelector('[name="userEmail"]')
+      let phoneNumberInput = document.querySelector('[name="phoneNumber"]')
+      let messageInput = document.querySelector('[name="message"]')
+      const modalclose = document.querySelector('[data-dismiss="modal"]')
+
+
+      contactForm.addEventListener("click", async function (e) {
+        e.preventDefault();
+        let userName = document.querySelector('[name="userName"]').value;
+        let userEmail = document.querySelector('[name="userEmail"]').value;
+        let message = document.querySelector('[name="message"]').value;
+        let phoneNumber = document.querySelector('[name="phoneNumber"]').value;
+        validateFields(userName, userEmail, phoneNumber, message)  
+      })
+    function validateFields(userName, userEmail, phoneNumber, message) {
+    var nameRegex = /^[\w\s.,!?-]+$/;
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var phoneRegex = /^\+?[0-9\s()-]+$/;
+    var messageRegex = /^[\w\s.,!?-]+$/;
+
+    var nameError = false;
+    var emailError = false;
+    var phoneError = false;
+    var messageError = false;
+
+    if (userName.trim() === '') {
+        document.getElementById("errorUserName").innerText = "Name is required";
+        nameError = true;
+    } else if (!nameRegex.test(userName)) {
+        document.getElementById("errorUserName").innerText = "Invalid name";
+        nameError = true;
+    } else {
+        document.getElementById("errorUserName").innerText = "";
+    }
+
+    if (userEmail.trim() === '') {
+        document.getElementById("errorUserEmail").innerText = "Email is required";
+        emailError = true;
+    } else if (!emailRegex.test(userEmail)) {
+        document.getElementById("errorUserEmail").innerText = "Invalid email address";
+        emailError = true;
+    } else {
+        document.getElementById("errorUserEmail").innerText = "";
+    }
+
+    if (phoneNumber.trim() === "") {
+        document.getElementById("errorPhoneNumber").innerText = "Phone Number is required";
+        phoneError = true;
+    } else if (phoneNumber.length < 10 && phoneNumber.trim() !== "") {
+        document.getElementById("errorPhoneNumber").innerText = "Please enter a valid phone number";
+        phoneError = true;
+    } else if (!phoneRegex.test(phoneNumber)) {
+        document.getElementById("errorPhoneNumber").innerText = "Please enter a valid phone number";
+        phoneError = true;
+    }
+    else {
+        document.getElementById("errorPhoneNumber").innerText = "";
+    }
+
+    if (message.trim() === "") {
+        document.getElementById("errorMessage").innerText = "Message is required";
+        messageError = true;
+    } else if (!messageRegex.test(message)) {
+        document.getElementById("errorMessage").innerText = "Please enter a valid message";
+        messageError = true;
+    } else {
+        document.getElementById("errorMessage").innerText = "";
+    }
+
+    // Check if any errors occurred
+    if (nameError || emailError || phoneError || messageError) {
+        return; // Return without submitting the form
+    }
+    submitForm(userName, userEmail, phoneNumber, message)
+}
+
+async function submitForm(userName, userEmail, phoneNumber, message) {
+    const url = "https://api.applygenie.ai/api/services/app/Support/sendSupportMessage";
+
+    try {
+        const response = await fetch(url, {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                userName: userName,
+                userEmail: userEmail,
+                message: message,
+                phoneNumber: phoneNumber
+            })
+        });
+        if (response.ok) {
+            document.querySelector('[name="userName"]').value = '';
+            document.querySelector('[name="userEmail"]').value = '';
+            document.querySelector('[name="message"]').value = '';
+            document.querySelector('[name="phoneNumber"]').value = '';
+            successModal.style.display = 'block';
+        }
+    } catch (error) {
+        console.error("Error:", error);
+    }
+}
+
+      modalclose.addEventListener("click", function () {
+        successModal.style.display = 'none'
+      })
+      userEmailInput.addEventListener("input", function () {
+      let userEmail =  userEmailInput.value;
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+       
+       if (userEmail.trim()==''){
+        userEmailInput.value=userEmail.trim();
+        document.getElementById("errorUserEmail").innerText = "Email is required";
+      } else if (!emailRegex.test(userEmail)) {
+            document.getElementById("errorUserEmail").innerText = "Invalid email address";
+            return;
+        }
+      else{
+        document.getElementById("errorUserEmail").innerText = "";
+      }
+
+    });
+    userNameInput.addEventListener("input", function () {
+    let userName = userNameInput.value;
+    var nameRegex =  /^[\w\s.,!?-]+$/;
+
+    if (userName.trim() == '') {
+      userNameInput.value = userName.trim();
+        document.getElementById("errorUserName").innerText = "Name is required";
+    } else if (!nameRegex.test(userName)) {
+        document.getElementById("errorUserName").innerText = "Invalid name";
+    } else {
+        document.getElementById("errorUserName").innerText = "";
+    }
+});
+
+
+phoneNumberInput.addEventListener("input", function () {
+    let phoneNumber = phoneNumberInput.value;
+    phoneNumberInput.value = phoneNumber;
+    var phoneRegex = /^\+?[0-9\s()-]+$/;
+
+    if (phoneNumber.trim() == "") {
+        phoneNumberInput.value = phoneNumber.trim();
+        document.getElementById("errorPhoneNumber").innerText = "Phone Number is required";
+    } else if (phoneNumber.length < 10 && phoneNumber.trim() !== "") {
+        document.getElementById("errorPhoneNumber").innerText = "Please enter a valid phone number";
+    } else if (!phoneRegex.test(phoneNumber)) {
+        document.getElementById("errorPhoneNumber").innerText = "Please enter a valid phone number";
+    } else {
+        document.getElementById("errorPhoneNumber").innerText = "";
+    }
+});
+
+    messageInput.addEventListener("input", function () {
+      let message = messageInput.value;
+      var messageRegex = /^[\w\s.,!?-]+$/;
+      if (message.trim() === "") {
+        messageInput.value = message.trim();
+          document.getElementById("errorMessage").innerText = "message is required";
+          return;
+        }else if(!messageRegex.test(message)){
+          document.getElementById("errorMessage").innerText = "Please enter a valid message";
+        }else{
+          document.getElementById("errorMessage").innerText = "";
+        }
+    });
+});
+    function scrollToElement(id) {
+      var $element = document.getElementById(id);
+
+      if ($element === null) {
+        setTimeout(function () {
+          var $element = document.getElementById(id);
+          if ($element !== null) {
+            $element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+          }
+        }, 300);
+      } else {
+        $element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+      }
+    }
+  </script>
+</body>
+
+</html>
