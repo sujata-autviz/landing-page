@@ -727,7 +727,7 @@
         validateFields(userName, userEmail, phoneNumber, message)  
       })
     function validateFields(userName, userEmail, phoneNumber, message) {
-    var nameRegex = /^[\w\s.,!?-]+$/;
+    var nameRegex = /^[a-zA-Z\s,!?-]+$/;
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     var phoneRegex = /^\+?[0-9\s()-]+$/;
     var messageRegex = /^[\w\s.,!?-]+$/;
@@ -837,7 +837,7 @@ async function submitForm(userName, userEmail, phoneNumber, message) {
     });
     userNameInput.addEventListener("input", function () {
     let userName = userNameInput.value;
-    var nameRegex =  /^[\w\s.,!?-]+$/;
+    var nameRegex =  /^[a-zA-Z\s,!?-]+$/;
 
     if (userName.trim() == '') {
       userNameInput.value = userName.trim();
