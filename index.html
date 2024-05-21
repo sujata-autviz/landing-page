@@ -15,8 +15,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-
+  <script src="https://kit.fontawesome.com/893468b09a.js" crossorigin="anonymous"></script>
   <!-- Google Analytics  -->
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4P1BPTQJW"></script>
@@ -452,7 +453,34 @@
     </div>
   </section>
   <!--  applygenie perks ends -->
-
+  <section class="genie-insights">
+    <div class="container">
+      <div class="sec-heading">
+        <h2 class="text-center">Latest Insights</h2>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-12">
+          <div>
+            <div class="w-100 d-flex justify-content-center">
+              <div class="card w-sm-75 w-100" id="insight-card">
+                <div class="card-body position-relative card-min-ht d-flex align-items-center">
+                  <div class="row px-3" id="insight-content">
+                    <!-- Dynamic Content Will Be Inserted Here -->
+                  </div>
+                  <div class="position-absolute left-arrow-icon" onclick="changeSlide('prev')">
+                    <i class="fa-solid fa-angle-left"></i>
+                  </div>
+                  <div class="position-absolute right-arrow-icon" onclick="changeSlide('next')">
+                    <i class="fa-solid fa-angle-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!--  testimonial section start -->
   <section class="testimonial">
     <div class="container">
@@ -895,6 +923,70 @@ phoneNumberInput.addEventListener("input", function () {
         $element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
       }
     }
+
+
+    const insightsData = [
+      { 
+        url: 'https://www.bizjournals.com/orlando/inno/stories/awards/2024/04/09/inno-madness-winner-apply-genie.html', 
+        imgSrc: 'https://static.wixstatic.com/media/98bd55_cf5f72b19c554960b2b0a4a75cc694ee~mv2.png/v1/fill/w_597,h_216,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/98bd55_cf5f72b19c554960b2b0a4a75cc694ee~mv2.png', 
+        title: 'Meet ApplyGenie, the 2024 Orlando Inno Madness champion', 
+        description: "This year's champion makes applying for jobs easier. Here's what ApplyGenie does and what's next for the company." 
+      },
+      { 
+        url: 'https://www.renderanalytics.net/post/the-quiet-automation-arms-race-between-hr-departments-job-seekers', 
+        imgSrc: 'https://static.wixstatic.com/media/98bd55_f1139a07e8ac42af835a6f2c24633958~mv2.jpeg/v1/fill/w_444,h_223,al_c,lg_1,q_80,enc_auto/98bd55_f1139a07e8ac42af835a6f2c24633958~mv2.jpeg', 
+        title: 'The Quiet Automation Arms Race Between HR Departments & Job Seekers', 
+        description: "Web scraping and automation have led to a technology stand-off for job applications." 
+      },
+      { 
+        url: 'https://www.renderanalytics.net/post/applygenie-the-revolutionary-tool-automating-your-job-hunt', 
+        imgSrc: 'https://static.wixstatic.com/media/98bd55_cf5f72b19c554960b2b0a4a75cc694ee~mv2.png/v1/fill/w_597,h_216,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/98bd55_cf5f72b19c554960b2b0a4a75cc694ee~mv2.png', 
+        title: 'ApplyGenie: The Revolutionary Tool Automating Your Job Hunt', 
+        description: "ApplyGenie harnesses the power of automation to transform how individuals seek employment." 
+      }
+    ];
+
+    let currentIndex = 0;
+
+    function openLink(url) {
+      window.open(url, '_blank');
+    }
+
+    function changeSlide(action) {
+      if (action === 'next') {
+        currentIndex = (currentIndex + 1) % insightsData.length;
+      } else {
+        currentIndex = (currentIndex - 1 + insightsData.length) % insightsData.length;
+      }
+      renderInsight();
+    }
+
+    function renderInsight() {
+      const insight = insightsData[currentIndex];
+      const insightContent = `
+        <div class="col-md-3 col-12">
+          <div class="d-flex align-items-center h-100 ornaldo-logo">
+            <div class="w-100">
+              <img class="card-img-top" src="${insight.imgSrc}" alt="Card image cap">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9 col-12">
+          <div class="row d-flex align-items-center h-100">
+            <div class="mt-3 mt-md-0">
+              <h3>${insight.title}</h3>
+              <p>${insight.description}</p>
+            </div>
+          </div>
+        </div>
+      `;
+      const insightCard = document.getElementById('insight-content');
+      insightCard.innerHTML = insightContent;
+      insightCard.onclick = () => openLink(insight.url);
+    }
+
+    // Initialize with the first insight
+    renderInsight();
   </script>
 </body>
 

@@ -992,3 +992,28 @@ footer {
         object-fit: cover;
     }
 }
+
+.genie-insights {
+    background: rgb(207 236 255 / 19%);
+}
+
+.left-arrow-icon{
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    cursor: pointer;
+}
+.right-arrow-icon{
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+     cursor: pointer;
+}
+#insight-content{
+    cursor: pointer;
+}
+.card {
+    background-color: #e9f6fb;
+    border-radius: 0 10px 10px 0 !important;
+}
