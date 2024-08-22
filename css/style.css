@@ -1027,3 +1027,8 @@ footer {
     min-height: 210px;
     border: 1px solid #ccc;
 }
+
+.footer-texy span {
+    font-size: 13px;
+    padding-right: 74px;
+}
